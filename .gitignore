@@ -1,6 +1,10 @@
 # Personal wallpapers (not redistributed)
-/assets/wallpapers/static/
-/assets/wallpapers/live/
+/assets/wallpapers/static/*
+/assets/wallpapers/live/*
+
+# Keep directory structure
+!/assets/wallpapers/static/.gitkeep
+!/assets/wallpapers/live/.gitkeep
 
 # Nix build result symlinks
 /result
