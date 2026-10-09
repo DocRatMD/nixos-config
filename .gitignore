@@ -1,0 +1,27 @@
+# Personal wallpapers (not redistributed)
+/assets/wallpapers/static/
+/assets/wallpapers/live/
+
+# Nix build result symlinks
+/result
+/result-*
+
+# Local secrets and credentials
+*.age
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+
+# Editor and temporary files
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+
+# Local review archives
+*.zip
