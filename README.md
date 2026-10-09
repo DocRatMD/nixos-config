@@ -1,6 +1,6 @@
 # NixOS Configuration
 
-My personal NixOS configuration, managed declaratively using Nix flakes and Home Manager.
+My personal NixOS configuration using flakes, Home Manager, and flake-parts using the dendritic pattern.
 
 ## Architecture
 
