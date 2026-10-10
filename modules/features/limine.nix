@@ -1,11 +1,11 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.boot = { pkgs, ... }: {
+  flake.nixosModules.limine = { pkgs, ... }: {
     boot.loader.limine = {
       enable = true;
       maxGenerations = 5;
 
-      # Leave this false for the first install, then set it to true
+      # Make this false for the first install, then set it to true
       # once the keys exist and are enrolled.
       secureBoot.enable = true;
 
@@ -26,26 +26,12 @@
           brightForeground = "cdd6f4";
         };
       };
-
-      # extraConfig = ''
-      #   remember_last_entry: yes
-      # '';
-
-      extraEntries = ''
-        /Windows
-          protocol: efi
-          path: uuid(45b33acb-62b0-4116-a869-cfe10a6325c6):/EFI/Microsoft/Boot/bootmgfw.efi
-      '';
     };
 
     boot.loader.efi.canTouchEfiVariables = true;
 
     environment.systemPackages = [
       pkgs.sbctl
-    ];
-
-    boot.kernelParams = [
-      "reboot=pci" #For NVIDIA GPU
     ];
   };
 
