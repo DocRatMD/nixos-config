@@ -1,10 +1,13 @@
 # Personal wallpapers (not redistributed)
 /assets/wallpapers/static/*
 /assets/wallpapers/live/*
+/assets/icons/*
 
 # Keep directory structure
 !/assets/wallpapers/static/.gitkeep
 !/assets/wallpapers/live/.gitkeep
+!/assets/icons/.gitkeep
+!/assets/wallpapers/static/nixos-wallpaper-catppuccin-frappe.png
 
 # Nix build result symlinks
 /result

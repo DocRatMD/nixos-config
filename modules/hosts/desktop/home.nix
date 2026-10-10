@@ -15,6 +15,7 @@
       self.homeModules.discord
       self.homeModules.mangohud
       self.homeModules.cli-tools
+      self.homeModules.firefox
     ];
 
     home.shellAliases = {

@@ -1,6 +1,6 @@
 { self, inputs, lib, ... }:
 let
-  wallpaper = ../../assets/wallpapers/static/minecraft-snow.png;
+  wallpaper = ../../assets/wallpapers/static/nixos-wallpaper-catppuccin-frappe.png;
 in
 {
 
@@ -93,7 +93,8 @@ in
             {
               iconTasks = {
                 launchers = [
-                  "applications:helium.desktop"
+                  "applications:firefox.desktop"
+                  #"applications:helium.desktop"
                   "applications:org.kde.dolphin.desktop"
                   "applications:org.kde.konsole.desktop"
                 ];
@@ -116,6 +117,7 @@ in
                     "org.kde.plasma.battery"
                     "org.kde.plasma.weather"
                     "org.kde.plasma.devicenotifier"
+                    "org.kde.plasma.notifications"
                   ];
                 };
               };
