@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.optimizations = { pkgs, ... }: {
+  flake.nixosModules.performance = { pkgs, ... }: {
     zramSwap.enable = true;
 
     boot.kernelModules = [ "ntsync" ];

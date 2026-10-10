@@ -19,9 +19,6 @@
         numlock = true; # Enable or disable numlock by default
       };
     };
-    services.displayManager.sddm = {
-      enable = false;
-    };
   };
 
 }

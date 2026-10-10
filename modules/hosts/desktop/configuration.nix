@@ -11,7 +11,7 @@
       self.nixosModules.kde
       self.nixosModules.solaar
       self.nixosModules.steam
-      self.nixosModules.optimizations
+      self.nixosModules.performance
       self.nixosModules.fish
       self.nixosModules.ly
       self.nixosModules.lact
@@ -23,15 +23,6 @@
       "nix-command"
       "flakes"
     ];
-
-    users.users."rat" = {
-      packages = with pkgs; [
-        #Fix this
-        micro
-        tree
-        fastfetch
-      ];
-    };
 
     networking.hostName = "nixos"; # Define your hostname.
 

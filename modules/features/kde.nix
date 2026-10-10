@@ -7,11 +7,6 @@ in
   # System half: the Plasma session and login screen
   flake.nixosModules.kde = {
     services.desktopManager.plasma6.enable = true;
-
-    services.displayManager.sddm = {
-      enable = lib.mkDefault true; #Overwritten by ly.nix
-      wayland.enable = true;
-    };
   };
 
   # Home-manager half: plasma-manager and your Plasma settings

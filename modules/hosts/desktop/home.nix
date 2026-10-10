@@ -14,6 +14,7 @@
       self.homeModules.ssh
       self.homeModules.discord
       self.homeModules.mangohud
+      self.homeModules.cli-tools
     ];
 
     home.shellAliases = {
