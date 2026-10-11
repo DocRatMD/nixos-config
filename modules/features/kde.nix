@@ -15,22 +15,38 @@ in
       inputs.plasma-manager.homeModules.plasma-manager
     ];
 
-    home.packages = with pkgs; [
-      bibata-cursors
-    ];
+    home.pointerCursor = {
+      enable = true;
+      package = pkgs.apple-cursor;
+      name = "macOS";
+      size = 24;
+
+      gtk.enable = true;
+      x11.enable = true;
+    };
 
     programs.plasma = {
       enable = true;
       overrideConfig = true;
 
+      #Set dolphin view mode to details
+      dataFile."dolphin/view_properties/global/.directory"."Dolphin"."ViewMode" = 1;
+
+      #Allow per folder view types
+      configFile."dolphinrc"."General"."GlobalViewProps" = false;
+
+      #Set animation speed to instant
       configFile."kdeglobals"."KDE"."AnimationDurationFactor" = 0.0;
+
+      #Disable plasma browser extension reminder
+      configFile."kdeglobals"."PlasmaBrowserIntegration".shownCount = 100;
 
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
         #customWallpaperPluginType = "luisbocanegra.smart.video.wallpaper.reborn";
         wallpaper = wallpaper;
         cursor = {
-          theme = "Bibata-Modern-Ice";
+          theme = "macOS";
           size = 24;
         };
       };
@@ -98,6 +114,11 @@ in
 
       panels = [
         {
+          hiding = "none";
+          floating = false;
+          opacity = "adaptive";
+          lengthMode = "fill";
+          height = 38;
           location = "bottom";
           screen = "all";
           widgets = [
@@ -146,11 +167,6 @@ in
               };
             }
           ];
-          hiding = "none";
-          floating = false;
-          opacity = "adaptive";
-          lengthMode = "fill";
-          height = 38;
         }
       ];
     };

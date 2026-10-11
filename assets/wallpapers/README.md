@@ -7,3 +7,6 @@
 - **Modifications:** None
 
 This wallpaper remains under CC BY-SA 4.0 and is not covered by this repository's MIT license.
+
+# NOTE:
+**I DO NOT OWN ANY ASSETS INCLUDED IN THE "ASSETS" DIRECTORY OF THIS REPOSITORY. IF YOU SEE SOMETHING YOU OWN IN THIS REPOSITORY PLEASE SUBMIT AN ISSUE WITH PROOF AND I WILL REMOVE IT**

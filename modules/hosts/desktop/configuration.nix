@@ -5,18 +5,18 @@
     imports = [
       # Include the results of the hardware scan.
       self.nixosModules.desktopHardware
-      self.nixosModules.rat
-      self.nixosModules.limine
       self.nixosModules.nvidia
-      self.nixosModules.kde
-      self.nixosModules.niri
-      self.nixosModules.solaar
-      self.nixosModules.steam
-      self.nixosModules.performance
-      self.nixosModules.fish
-      self.nixosModules.ly
       self.nixosModules.lact
       self.nixosModules.lact-desktop
+      self.nixosModules.performance
+      self.nixosModules.limine
+      self.nixosModules.rat
+      self.nixosModules.ly
+      self.nixosModules.kde
+      self.nixosModules.niri
+      self.nixosModules.fish
+      self.nixosModules.solaar
+      self.nixosModules.steam
     ];
 
     home-manager.users.rat = self.homeModules.desktop;
@@ -33,6 +33,10 @@
     boot.kernelParams = [
       "reboot=pci" #For NVIDIA GPU
     ];
+
+    security.sudo.extraConfig = ''
+      Defaults pwfeedback
+    '';
 
     #Windows limine entry
     boot.loader.limine.extraEntries = ''

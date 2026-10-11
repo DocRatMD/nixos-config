@@ -19,7 +19,7 @@
             default_area = "navbar";
           };
 
-          #See user script at the bottom of this file
+          #See yt fullscreen scroll user script at the bottom of this file
           "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" = {
             installation_mode = "normal_installed";
             install_url =
@@ -101,6 +101,8 @@
         settings = {
           "sidebar.verticalTabs" = true;
 
+          "browser.toolbars.bookmarks.visibility" = "always";
+
           "ui.key.menuAccessKeyFocuses" = false;
 
           "media.hardware-video-decoding.force-enabled" = true;
@@ -125,6 +127,11 @@
         };
 
         userChrome = ''
+          /* Hide Import Bookmarks button */
+          #PersonalToolbar #import-button {
+            display: none !important;
+          }
+
           /* Compact, centered address bar */
           #urlbar-container {
             max-width: 700px !important;
