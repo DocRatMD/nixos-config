@@ -9,6 +9,7 @@
       self.nixosModules.limine
       self.nixosModules.nvidia
       self.nixosModules.kde
+      self.nixosModules.niri
       self.nixosModules.solaar
       self.nixosModules.steam
       self.nixosModules.performance

@@ -6,6 +6,8 @@
       self.homeModules.starship
       self.homeModules.helium
       self.homeModules.kde
+      self.homeModules.niri
+      self.homeModules.noctalia
       self.homeModules.zed
       self.homeModules.shell
       self.homeModules.fish

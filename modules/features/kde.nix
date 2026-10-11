@@ -10,18 +10,29 @@ in
   };
 
   # Home-manager half: plasma-manager and your Plasma settings
-  flake.homeModules.kde = {
+  flake.homeModules.kde = { pkgs, ... }: {
     imports = [
       inputs.plasma-manager.homeModules.plasma-manager
     ];
 
+    home.packages = with pkgs; [
+      bibata-cursors
+    ];
+
     programs.plasma = {
       enable = true;
+      overrideConfig = true;
+
+      configFile."kdeglobals"."KDE"."AnimationDurationFactor" = 0.0;
 
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
         #customWallpaperPluginType = "luisbocanegra.smart.video.wallpaper.reborn";
         wallpaper = wallpaper;
+        cursor = {
+          theme = "Bibata-Modern-Ice";
+          size = 24;
+        };
       };
 
       kscreenlocker = {
@@ -49,6 +60,8 @@ in
       };
 
       input = {
+        keyboard.numlockOnStartup = "on";
+
         mice = [
           {
             name = "Logitech PRO X 2";
@@ -68,8 +81,12 @@ in
       };
 
       shortcuts = {
-        "kwin"."Window Close" = "Meta+Q";
+        "kwin"."Window Close" = "Alt+Q";
+        "kwin"."Window Maximize" = "Alt+F";
+        "services/org.kde.konsole.desktop"."_launch" = "Alt+Return";
       };
+
+      krunner.shortcuts.launch = "Alt+D";
 
       kwin = {
         effects = {

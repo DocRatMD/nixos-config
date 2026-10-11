@@ -101,6 +101,8 @@
         settings = {
           "sidebar.verticalTabs" = true;
 
+          "ui.key.menuAccessKeyFocuses" = false;
+
           "media.hardware-video-decoding.force-enabled" = true;
 
           "media.videocontrols.picture-in-picture.enabled" = false;
@@ -123,6 +125,12 @@
         };
 
         userChrome = ''
+          /* Compact, centered address bar */
+          #urlbar-container {
+            max-width: 700px !important;
+            margin-inline: auto !important;
+          }
+
           #fxa-toolbar-menu-button {
             display: none !important;
           }
@@ -163,12 +171,6 @@
       };
     };
 
-
-
-
-
-
-
     xdg.mimeApps = {
       enable = true;
 
@@ -180,6 +182,9 @@
         "x-scheme-handler/https" = "firefox.desktop";
       };
     };
+
+    # Allow Home Manager to replace externally modified MIME associations.
+    xdg.configFile."mimeapps.list".force = true;
 
     xdg.desktopEntries.firefox = {
       name = "Firefox";
