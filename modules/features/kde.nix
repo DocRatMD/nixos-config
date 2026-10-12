@@ -114,6 +114,7 @@ in
 
       panels = [
         {
+          #General panel settings
           hiding = "none";
           floating = false;
           opacity = "adaptive";
@@ -121,6 +122,7 @@ in
           height = 38;
           location = "bottom";
           screen = "all";
+
           widgets = [
             {
               kickoff = {
@@ -132,7 +134,6 @@ in
               iconTasks = {
                 launchers = [
                   "applications:firefox.desktop"
-                  #"applications:helium.desktop"
                   "applications:org.kde.dolphin.desktop"
                   "applications:org.kde.konsole.desktop"
                 ];

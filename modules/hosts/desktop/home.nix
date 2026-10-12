@@ -18,6 +18,8 @@
       self.homeModules.mangohud
       self.homeModules.cli-tools
       self.homeModules.firefox
+      self.homeModules.prismlauncher
+      self.homeModules.amethyst
     ];
 
     home.shellAliases = {

@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "amethyst": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1791635010,
+        "narHash": "sha256-woExKlJqONLSGg4BjyZzZg13IxTIonpgENChsryZVLY=",
+        "owner": "ChrisDKN",
+        "repo": "Amethyst-Mod-Manager",
+        "rev": "edde06e518c0a3ca5ba47a8bbf065c4ecc4a8f92",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ChrisDKN",
+        "repo": "Amethyst-Mod-Manager",
+        "type": "github"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -223,6 +243,7 @@
     },
     "root": {
       "inputs": {
+        "amethyst": "amethyst",
         "flake-parts": "flake-parts",
         "helium": "helium",
         "home-manager": "home-manager",
