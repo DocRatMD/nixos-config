@@ -1,5 +1,9 @@
 { self, inputs, ... }: {
 
+  flake.nixosModules.prismlauncher = {
+    home-manager.sharedModules = [ self.homeModules.prismlauncher ];
+  };
+
   flake.homeModules.prismlauncher = { pkgs, ... }: {
     programs.prismlauncher = {
       enable = true;

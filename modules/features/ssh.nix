@@ -1,5 +1,9 @@
 { self, inputs, ... }: {
 
+  flake.nixosModules.ssh = {
+    home-manager.sharedModules = [ self.homeModules.ssh ];
+  };
+
   flake.homeModules.ssh = { ... }: {
     programs.ssh = {
       enable = true;

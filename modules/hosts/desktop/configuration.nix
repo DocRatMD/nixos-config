@@ -14,9 +14,22 @@
       self.nixosModules.ly
       self.nixosModules.kde
       self.nixosModules.niri
+      self.nixosModules.noctalia
       self.nixosModules.fish
       self.nixosModules.solaar
       self.nixosModules.steam
+      self.nixosModules.starship
+      self.nixosModules.helium
+      self.nixosModules.amethyst
+      self.nixosModules.prismlauncher
+      self.nixosModules.zed
+      self.nixosModules.shell
+      self.nixosModules.git
+      self.nixosModules.ssh
+      self.nixosModules.discord
+      self.nixosModules.mangohud
+      self.nixosModules.cli-tools
+      self.nixosModules.firefox
     ];
 
     home-manager.users.rat = self.homeModules.desktop;

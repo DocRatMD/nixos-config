@@ -1,5 +1,9 @@
-{ self, inputs, ... }:
-{
+{ self, inputs, ... }: {
+
+  flake.nixosModules.zed = {
+    home-manager.sharedModules = [ self.homeModules.zed ];
+  };
+
   flake.homeModules.zed = { pkgs, ... }: {
     home.packages = [
       pkgs.nixpkgs-fmt

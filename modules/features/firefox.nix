@@ -1,4 +1,9 @@
 { self, inputs, ... }: {
+
+  flake.nixosModules.firefox = {
+    home-manager.sharedModules = [ self.homeModules.firefox ];
+  };
+
   flake.homeModules.firefox = { config, ... }: {
     programs.firefox = {
       enable = true;

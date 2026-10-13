@@ -1,5 +1,6 @@
 { self, inputs, ... }: {
   flake.nixosModules.niri = { pkgs, ... }: {
+    home-manager.sharedModules = [ self.homeModules.niri ];
     imports = [
       inputs.niri.nixosModules.niri
     ];

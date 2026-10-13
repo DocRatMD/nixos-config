@@ -4,15 +4,18 @@ let
 in
 {
 
-  # System half: the Plasma session and login screen
   flake.nixosModules.kde = {
+    home-manager.sharedModules = [ self.homeModules.kde ];
     services.desktopManager.plasma6.enable = true;
   };
 
-  # Home-manager half: plasma-manager and your Plasma settings
   flake.homeModules.kde = { pkgs, ... }: {
     imports = [
       inputs.plasma-manager.homeModules.plasma-manager
+    ];
+
+    home.packages = with pkgs; [
+      papirus-icon-theme
     ];
 
     home.pointerCursor = {
@@ -43,6 +46,7 @@ in
 
       workspace = {
         lookAndFeel = "org.kde.breezedark.desktop";
+        iconTheme = "Papirus-Dark";
         #customWallpaperPluginType = "luisbocanegra.smart.video.wallpaper.reborn";
         wallpaper = wallpaper;
         cursor = {
@@ -119,7 +123,7 @@ in
           floating = false;
           opacity = "adaptive";
           lengthMode = "fill";
-          height = 38;
+          height = 40;
           location = "bottom";
           screen = "all";
 

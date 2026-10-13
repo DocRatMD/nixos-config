@@ -1,25 +1,8 @@
 { self, inputs, ... }: {
-  # This is your home.nix, your module where you configure home-manager
-  # It's imported both in standalone configuration above, and in your nixos configuration
+
   flake.homeModules.desktop = { pkgs, config, ... }: {
     imports = [
-      self.homeModules.starship
-      self.homeModules.helium
-      self.homeModules.kde
-      self.homeModules.niri
-      self.homeModules.noctalia
-      self.homeModules.zed
-      self.homeModules.shell
-      self.homeModules.fish
-      self.homeModules.solaar
-      self.homeModules.git
-      self.homeModules.ssh
-      self.homeModules.discord
-      self.homeModules.mangohud
-      self.homeModules.cli-tools
-      self.homeModules.firefox
-      self.homeModules.prismlauncher
-      self.homeModules.amethyst
+      # I use sharedModules so all imports are done in configuration.nix
     ];
 
     home.shellAliases = {
@@ -27,7 +10,6 @@
     };
 
     home.stateVersion = "26.05";
-
   };
 
 }

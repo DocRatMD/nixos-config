@@ -1,5 +1,9 @@
 { self, inputs, ... }: {
 
+  flake.nixosModules.mangohud = {
+    home-manager.sharedModules = [ self.homeModules.mangohud ];
+  };
+
   flake.homeModules.mangohud = { ... }: {
     programs.mangohud = {
       enable = true;
