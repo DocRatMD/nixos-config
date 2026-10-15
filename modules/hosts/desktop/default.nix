@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.nixosConfigurations.desktop = inputs.nixpkgs.lib.nixosSystem {
+  flake.nixosConfigurations.nixos-desktop = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.desktopConfiguration
       self.nixosModules.myHomeManager

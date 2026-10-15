@@ -159,12 +159,12 @@
 
           /* Replace Firefox's New Tab favicon */
           .tab-icon-image[src="chrome://branding/content/icon32.png"] {
-            content: url("file://${../../assets/icons/firefox-nightly.svg}") !important;
+            content: url("file://${inputs.assets}/icons/firefox-nightly.svg") !important;
           }
 
           /* About Firefox logo */
           #leftBox {
-            background-image: url("file://${../../assets/icons/firefox-nightly.svg}") !important;
+            background-image: url("file://${inputs.assets}/icons/firefox-nightly.svg") !important;
             background-repeat: no-repeat !important;
             background-size: 192px auto !important;
           }
@@ -173,7 +173,7 @@
         userContent = ''
           @-moz-document url("about:home"), url("about:newtab") {
             .logo-and-wordmark .logo {
-              background-image: url("file://${../../assets/icons/firefox-nightly.svg}") !important;
+              background-image: url("file://${inputs.assets}/icons/firefox-nightly.svg") !important;
               background-size: contain !important;
               background-repeat: no-repeat !important;
               background-position: center !important;
@@ -205,7 +205,7 @@
       #REVISIT DISABLING THE RDD SANDBOX AS DRIVERS UPDATE
       exec = "env LIBVA_DRIVER_NAME=nvidia MOZ_DISABLE_RDD_SANDBOX=1 firefox --name firefox %U";
       #exec = "firefox --name firefox %U";
-      icon = ../../assets/icons/firefox-nightly.svg;
+      icon = "${inputs.assets}/icons/firefox-nightly.svg";
 
       terminal = false;
 

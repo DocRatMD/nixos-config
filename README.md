@@ -17,32 +17,11 @@ My personal NixOS configuration using flakes, Home Manager, and flake-parts usin
 | `desktop` | Primary NixOS desktop |
 | `laptop` | Planned |
 
-## Repository Structure
-
-```text
-.
-├── assets/
-│   └── wallpapers/
-├── modules/
-│   ├── features/
-│   ├── hosts/
-│   │   └── desktop/
-│   └── parts.nix
-├── flake.nix
-└── flake.lock
-```
-
 ## Building
 
-This configuration currently uses local wallpapers excluded from Git for licensing reasons.
+This configuration currently uses assets excluded from Git for licensing reasons.
 
 A fresh clone will require the missing wallpaper assets or adjustments to their references.
-
-On my configured machine:
-
-```bash
-sudo nixos-rebuild switch --flake "path:$HOME/nixos-config#desktop"
-```
 
 ## Notes
 

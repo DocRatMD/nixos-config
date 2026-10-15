@@ -10,7 +10,7 @@
       secureBoot.enable = true;
 
       style = {
-        wallpapers = [ ../../assets/wallpapers/static/limine-splash.png ];
+        wallpapers = [ "${inputs.assets}/wallpapers/static/limine-splash.png" ];
         wallpaperStyle = "stretched";
 
         interface = {
