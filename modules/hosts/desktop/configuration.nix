@@ -1,34 +1,42 @@
 { self, inputs, ... }: {
-  # This is your configuration.nix, a place where you configure your system
-  # You can place it in a separate file.
+
+  flake.nixosConfigurations.nixos-desktop = inputs.nixpkgs.lib.nixosSystem {
+    modules = [ self.nixosModules.desktopConfiguration ];
+  };
+
   flake.nixosModules.desktopConfiguration = { config, pkgs, ... }: {
     imports = [
-      # Include the results of the hardware scan.
+      # Base
       self.nixosModules.desktopHardware
+      self.nixosModules.homemanager
+      self.nixosModules.rat
+      self.nixosModules.limine
+      # Hardware
       self.nixosModules.nvidia
       self.nixosModules.lact
       self.nixosModules.lact-desktop
       self.nixosModules.performance
-      self.nixosModules.limine
-      self.nixosModules.rat
+      # Desktop
       self.nixosModules.ly
       self.nixosModules.kde
       self.nixosModules.niri
       self.nixosModules.noctalia
+      # Shell and CLI
       self.nixosModules.fish
+      self.nixosModules.cli-tools
+      self.nixosModules.starship
+      self.nixosModules.shell
+      self.nixosModules.git
+      self.nixosModules.ssh
+      # Apps
       self.nixosModules.solaar
       self.nixosModules.steam
-      self.nixosModules.starship
       self.nixosModules.helium
       self.nixosModules.amethyst
       self.nixosModules.prismlauncher
       self.nixosModules.zed
-      self.nixosModules.shell
-      self.nixosModules.git
-      self.nixosModules.ssh
       self.nixosModules.discord
       self.nixosModules.mangohud
-      self.nixosModules.cli-tools
       self.nixosModules.firefox
     ];
 
@@ -69,18 +77,6 @@
 
     # Select internationalisation properties.
     i18n.defaultLocale = "en_US.UTF-8";
-
-    i18n.extraLocaleSettings = {
-      LC_ADDRESS = "en_US.UTF-8";
-      LC_IDENTIFICATION = "en_US.UTF-8";
-      LC_MEASUREMENT = "en_US.UTF-8";
-      LC_MONETARY = "en_US.UTF-8";
-      LC_NAME = "en_US.UTF-8";
-      LC_NUMERIC = "en_US.UTF-8";
-      LC_PAPER = "en_US.UTF-8";
-      LC_TELEPHONE = "en_US.UTF-8";
-      LC_TIME = "en_US.UTF-8";
-    };
 
     # Enable CUPS to print documents.
     #services.printing.enable = true;
