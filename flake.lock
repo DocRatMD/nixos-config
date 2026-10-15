@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "assets": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1791948797,
+        "narHash": "sha256-SXRVBgyl4TbaMeFSaYul+88PqHKBN3JR5uE2yMcG/20=",
+        "ref": "refs/heads/main",
+        "rev": "cded6086fe92a2e749d9d491ab4d198ed318a273",
+        "revCount": 5,
+        "type": "git",
+        "url": "ssh://git@github.com/DocRatMD/nixos-assets"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@github.com/DocRatMD/nixos-assets"
+      }
+    },
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": "nixpkgs-lib"
@@ -244,6 +260,7 @@
     "root": {
       "inputs": {
         "amethyst": "amethyst",
+        "assets": "assets",
         "flake-parts": "flake-parts",
         "helium": "helium",
         "home-manager": "home-manager",

@@ -1,6 +1,6 @@
 { self, inputs, lib, ... }:
 let
-  wallpaper = ../../assets/wallpapers/static/nixos-wallpaper-catppuccin-frappe.png;
+  wallpaper = "${inputs.assets}/wallpapers/static/minecraft-snow-moon.png";
 in
 {
 
@@ -131,7 +131,7 @@ in
             {
               kickoff = {
                 sortAlphabetically = true;
-                icon = "nix-snowflake-white";
+                icon = "${inputs.assets}/icons/nix-snowflake-white.svg";
               };
             }
             {

@@ -9,6 +9,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    assets = {
+      url = "git+ssh://git@github.com/DocRatMD/nixos-assets";
+      flake = false;
+    };
     helium = {
       url = "github:cjavad/nixpille-helium";
       inputs.nixpkgs.follows = "nixpkgs";
