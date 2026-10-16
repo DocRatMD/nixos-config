@@ -1,20 +1,20 @@
 { self, inputs, ... }: {
 
   flake.nixosConfigurations.nixos-desktop = inputs.nixpkgs.lib.nixosSystem {
-    modules = [ self.nixosModules.desktopConfiguration ];
+    modules = [ self.nixosModules.desktop-configuration ];
   };
 
-  flake.nixosModules.desktopConfiguration = { config, pkgs, ... }: {
+  flake.nixosModules.desktop-configuration = { config, pkgs, ... }: {
     imports = [
       # Base
-      self.nixosModules.desktopHardware
-      self.nixosModules.homemanager
+      self.nixosModules.desktop-hardware
+      self.nixosModules.home-manager
       self.nixosModules.rat
       self.nixosModules.limine
       # Hardware
       self.nixosModules.nvidia
       self.nixosModules.lact
-      self.nixosModules.lact-desktop
+      self.nixosModules.desktop-lact
       self.nixosModules.performance
       # Desktop
       self.nixosModules.ly

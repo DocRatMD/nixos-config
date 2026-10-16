@@ -14,8 +14,8 @@ My personal NixOS configuration using flakes, Home Manager, and flake-parts usin
 
 | Host | Description |
 |---|---|
-| `desktop` | Primary NixOS desktop |
-| `laptop` | Planned |
+| `nixos-desktop` | Primary NixOS desktop |
+| `nixos-laptop` | Planned |
 
 ## Building
 

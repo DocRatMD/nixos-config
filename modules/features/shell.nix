@@ -11,7 +11,8 @@
     {
       home.shellAliases = {
         ll = "ls -l";
-        rebuild = "nix flake update assets --flake '${flake}'; nixos-rebuild switch --sudo --flake '${flake}'";
+        rebuild = "nixos-rebuild switch --sudo --flake '${flake}'";
+        assets = "nix flake update assets --flake '${flake}'";
       };
     };
 

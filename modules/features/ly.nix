@@ -4,7 +4,7 @@
     services.displayManager.ly = {
       enable = true;
       settings = {
-        allow_empty_password = false; # Unsure if this is safe or not
+        allow_empty_password = false;
         animation = "colormix"; # none doom matrix colormix gameoflife dur_file
         animation_timeout_sec = 0; # Stops animation after X seconds
         auth_fails = 3; # Plays special animation after X fails. 0 to disable
