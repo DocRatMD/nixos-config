@@ -38,6 +38,8 @@
       self.nixosModules.discord
       self.nixosModules.mangohud
       self.nixosModules.firefox
+      self.nixosModules.faugus-launcher
+      self.nixosModules.wowup-cf
     ];
 
     home-manager.users.rat = self.homeModules.desktop;

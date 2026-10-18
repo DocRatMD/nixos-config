@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.noctalia = {
+  flake.nixosModules.noctalia = { ... }: {
     home-manager.sharedModules = [ self.homeModules.noctalia ];
   };
 

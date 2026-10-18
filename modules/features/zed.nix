@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.zed = {
+  flake.nixosModules.zed = { ... }: {
     home-manager.sharedModules = [ self.homeModules.zed ];
   };
 

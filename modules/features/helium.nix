@@ -1,9 +1,9 @@
 { self, inputs, ... }: {
-  flake.nixosModules.helium = {
+  flake.nixosModules.helium = { ... }: {
     home-manager.sharedModules = [ self.homeModules.helium ];
   };
 
-  flake.homeModules.helium = {
+  flake.homeModules.helium = { ... }: {
     imports = [
       inputs.helium.homeModules.default
     ];

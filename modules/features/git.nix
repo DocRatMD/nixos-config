@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.git = {
+  flake.nixosModules.git = { ... }: {
     home-manager.sharedModules = [ self.homeModules.git ];
   };
 

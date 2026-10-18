@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.cli-tools = {
+  flake.nixosModules.cli-tools = { ... }: {
     home-manager.sharedModules = [ self.homeModules.cli-tools ];
   };
 

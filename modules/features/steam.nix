@@ -12,6 +12,13 @@
         };
       };
     };
+    environment.etc."xdg/autostart/steam.desktop".text = ''
+      [Desktop Entry]
+      Type=Application
+      Name=Steam
+      Exec=steam -silent
+      Icon=steam
+    '';
   };
 
 }

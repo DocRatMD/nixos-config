@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.mangohud = {
+  flake.nixosModules.mangohud = { ... }: {
     home-manager.sharedModules = [ self.homeModules.mangohud ];
   };
 

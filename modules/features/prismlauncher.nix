@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.prismlauncher = {
+  flake.nixosModules.prismlauncher = { ... }: {
     home-manager.sharedModules = [ self.homeModules.prismlauncher ];
   };
 

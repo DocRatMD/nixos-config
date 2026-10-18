@@ -1,9 +1,9 @@
 { self, inputs, ... }: {
-  flake.nixosModules.starship = {
+  flake.nixosModules.starship = { ... }: {
     home-manager.sharedModules = [ self.homeModules.starship ];
   };
 
-  flake.homeModules.starship = {
+  flake.homeModules.starship = { ... }: {
     programs.starship = {
       enable = true;
       settings = {

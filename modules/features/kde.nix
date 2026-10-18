@@ -4,7 +4,7 @@ let
 in
 {
 
-  flake.nixosModules.kde = {
+  flake.nixosModules.kde = { ... }: {
     home-manager.sharedModules = [ self.homeModules.kde ];
     services.desktopManager.plasma6.enable = true;
   };
@@ -40,6 +40,9 @@ in
 
       #Set animation speed to instant
       configFile."kdeglobals"."KDE"."AnimationDurationFactor" = 0.0;
+
+      #Disable hot corners
+      configFile.kwinrc."Effect-overview".BorderActivate = 9;
 
       #Disable plasma browser extension reminder
       configFile."kdeglobals"."PlasmaBrowserIntegration".shownCount = 100;

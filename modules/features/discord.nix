@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.discord = {
+  flake.nixosModules.discord = { ... }: {
     home-manager.sharedModules = [ self.homeModules.discord ];
   };
 

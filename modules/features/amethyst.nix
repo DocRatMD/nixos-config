@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.amethyst = {
+  flake.nixosModules.amethyst = { ... }: {
     home-manager.sharedModules = [ self.homeModules.amethyst ];
   };
 

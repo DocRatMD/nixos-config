@@ -1,6 +1,6 @@
 { self, inputs, ... }: {
 
-  flake.nixosModules.firefox = {
+  flake.nixosModules.firefox = { ... }: {
     home-manager.sharedModules = [ self.homeModules.firefox ];
   };
 
@@ -105,29 +105,16 @@
 
         settings = {
           "sidebar.verticalTabs" = true;
-
           "browser.toolbars.bookmarks.visibility" = "always";
-
           "ui.key.menuAccessKeyFocuses" = false;
-
           "media.hardware-video-decoding.force-enabled" = true;
-
           "media.videocontrols.picture-in-picture.enabled" = false;
           "media.videocontrols.picture-in-picture.video-toggle.enabled" = false;
-
-          # Use Firefox's own theme instead of Linux system colors
           "browser.theme.native-theme" = false;
-
-          # Restore previous session
           "browser.startup.page" = 3;
-
-          # Hide sidebar tools
           "sidebar.main.tools" = "";
-
-          # Strict Enhanced Tracking Protection
           "browser.contentblocking.category" = "strict";
           "privacy.globalprivacycontrol.enabled" = true;
-
           "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
         };
 
@@ -189,7 +176,6 @@
       defaultApplications = {
         "text/html" = "firefox.desktop";
         "application/xhtml+xml" = "firefox.desktop";
-
         "x-scheme-handler/http" = "firefox.desktop";
         "x-scheme-handler/https" = "firefox.desktop";
       };
