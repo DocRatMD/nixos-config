@@ -40,6 +40,7 @@
       self.nixosModules.firefox
       self.nixosModules.faugus-launcher
       self.nixosModules.wowup-cf
+      self.nixosModules.proton-vpn
     ];
 
     home-manager.users.rat = self.homeModules.desktop;

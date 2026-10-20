@@ -164,6 +164,7 @@ in
                     "org.kde.plasma.weather"
                     "org.kde.plasma.devicenotifier"
                     "org.kde.plasma.notifications"
+                    "org.kde.plasma.mediacontroller"
                   ];
                 };
               };
