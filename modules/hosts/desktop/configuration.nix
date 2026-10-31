@@ -6,11 +6,12 @@
 
   flake.nixosModules.desktop-configuration = { config, pkgs, ... }: {
     imports = [
-      # Base
+      # Base / System
       self.nixosModules.desktop-hardware
       self.nixosModules.home-manager
       self.nixosModules.rat
       self.nixosModules.limine
+      self.nixosModules.nix-gc
       # Hardware
       self.nixosModules.nvidia
       self.nixosModules.lact
@@ -31,7 +32,7 @@
       # Apps
       self.nixosModules.solaar
       self.nixosModules.steam
-      self.nixosModules.helium
+      #self.nixosModules.helium
       self.nixosModules.amethyst
       self.nixosModules.prismlauncher
       self.nixosModules.zed
@@ -41,6 +42,7 @@
       self.nixosModules.faugus-launcher
       self.nixosModules.wowup-cf
       self.nixosModules.proton-vpn
+      self.nixosModules.motrix
     ];
 
     home-manager.users.rat = self.homeModules.desktop;

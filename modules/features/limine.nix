@@ -3,7 +3,7 @@
   flake.nixosModules.limine = { pkgs, ... }: {
     boot.loader.limine = {
       enable = true;
-      maxGenerations = 5;
+      maxGenerations = 10;
 
       # Make this false for the first install, then set it to true
       # once the keys exist and are enrolled.

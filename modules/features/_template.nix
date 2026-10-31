@@ -5,7 +5,8 @@
     # Insert stuff here
   };
 
-  flake.homeModules.NAME = { ... }: {
+  flake.homeModules.NAME = { pkgs, ... }: {
+    #home.packages = with pkgs; [ NAME ];
     # Insert stuff here
   };
 

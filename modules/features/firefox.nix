@@ -17,6 +17,13 @@
             default_area = "menupanel";
           };
 
+          "{442789cf-4ff6-4a85-bf5b-53aa3282f1a2}" = {
+            installation_mode = "normal_installed";
+            install_url =
+              "https://addons.mozilla.org/firefox/downloads/latest/auto-tab-groups/latest.xpi";
+            default_area = "menupanel";
+          };
+
           "78272b6fa58f4a1abaac99321d503a20@proton.me" = {
             installation_mode = "normal_installed";
             install_url =
