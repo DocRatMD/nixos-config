@@ -30,7 +30,7 @@ in
 
     programs.plasma = {
       enable = true;
-      overrideConfig = true;
+      #overrideConfig = true;
 
       #Set dolphin view mode to details
       dataFile."dolphin/view_properties/global/.directory"."Dolphin"."ViewMode" = 1;
@@ -65,17 +65,6 @@ in
         };
       };
 
-      powerdevil = {
-        AC = {
-          autoSuspend.action = "nothing";
-          dimDisplay.enable = lib.mkDefault false;
-          powerProfile = lib.mkDefault "performance";
-          turnOffDisplay = {
-            idleTimeout = lib.mkDefault "never";
-          };
-        };
-      };
-
       session = {
         sessionRestore = {
           restoreOpenApplicationsOnLogin = "startWithEmptySession";
@@ -84,23 +73,6 @@ in
 
       input = {
         keyboard.numlockOnStartup = "on";
-
-        mice = [
-          {
-            name = "Logitech PRO X 2";
-            vendorId = "046d";
-            productId = "40a9";
-            accelerationProfile = "none";
-            acceleration = 0.0;
-          }
-          {
-            name = "Logitech PRO X 2";
-            vendorId = "046d";
-            productId = "c09b";
-            accelerationProfile = "none";
-            acceleration = 0.0;
-          }
-        ];
       };
 
       shortcuts = {

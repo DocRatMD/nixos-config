@@ -31,6 +31,13 @@
             default_area = "navbar";
           };
 
+          "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
+            installation_mode = "normal_installed";
+            install_url =
+              "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
+            default_area = "navbar";
+          };
+
           #See yt fullscreen scroll user script at the bottom of this file
           "{aecec67f-0d10-4fa7-b7c7-609a2db280cf}" = {
             installation_mode = "normal_installed";

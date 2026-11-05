@@ -20,8 +20,9 @@
       # Desktop
       self.nixosModules.ly
       self.nixosModules.kde
-      self.nixosModules.niri
-      self.nixosModules.noctalia
+      self.nixosModules.desktop-kde
+      # self.nixosModules.niri
+      # self.nixosModules.noctalia
       # Shell and CLI
       self.nixosModules.fish
       self.nixosModules.cli-tools
@@ -32,7 +33,7 @@
       # Apps
       self.nixosModules.solaar
       self.nixosModules.steam
-      #self.nixosModules.helium
+      # self.nixosModules.helium
       self.nixosModules.amethyst
       self.nixosModules.prismlauncher
       self.nixosModules.zed
@@ -41,8 +42,9 @@
       self.nixosModules.firefox
       self.nixosModules.faugus-launcher
       self.nixosModules.wowup-cf
-      self.nixosModules.proton-vpn
+      # self.nixosModules.proton-vpn
       self.nixosModules.motrix
+      self.nixosModules.ivpn
     ];
 
     home-manager.users.rat = self.homeModules.desktop;
