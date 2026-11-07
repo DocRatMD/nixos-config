@@ -137,6 +137,7 @@ in
                     "org.kde.plasma.devicenotifier"
                     "org.kde.plasma.notifications"
                     "org.kde.plasma.mediacontroller"
+                    "org.kde.merkuro.contact.applet"
                   ];
                 };
               };

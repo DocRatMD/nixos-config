@@ -31,8 +31,10 @@
       self.nixosModules.git
       self.nixosModules.ssh
       # Apps
+      self.nixosModules.kitty
       self.nixosModules.solaar
       self.nixosModules.steam
+      self.nixosModules.heroic
       # self.nixosModules.helium
       self.nixosModules.amethyst
       self.nixosModules.prismlauncher
@@ -45,6 +47,7 @@
       # self.nixosModules.proton-vpn
       self.nixosModules.motrix
       self.nixosModules.ivpn
+      self.nixosModules.localsend
     ];
 
     home-manager.users.rat = self.homeModules.desktop;
