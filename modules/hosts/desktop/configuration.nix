@@ -35,19 +35,21 @@
       self.nixosModules.solaar
       self.nixosModules.steam
       self.nixosModules.heroic
-      # self.nixosModules.helium
+      self.nixosModules.helium
       self.nixosModules.amethyst
       self.nixosModules.prismlauncher
       self.nixosModules.zed
       self.nixosModules.discord
       self.nixosModules.mangohud
-      self.nixosModules.firefox
+      # self.nixosModules.firefox
       self.nixosModules.faugus-launcher
       self.nixosModules.wowup-cf
       # self.nixosModules.proton-vpn
       self.nixosModules.motrix
       self.nixosModules.ivpn
       self.nixosModules.localsend
+      self.nixosModules.xivlauncher
+      self.nixosModules.cider
     ];
 
     home-manager.users.rat = self.homeModules.desktop;

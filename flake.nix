@@ -32,6 +32,10 @@
       url = "github:ChrisDKN/Amethyst-Mod-Manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    cider = {
+      url = "github:dmnc98/cider-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

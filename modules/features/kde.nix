@@ -51,7 +51,7 @@ in
         lookAndFeel = "org.kde.breezedark.desktop";
         iconTheme = "Papirus-Dark";
         #customWallpaperPluginType = "luisbocanegra.smart.video.wallpaper.reborn";
-        wallpaper = wallpaper;
+        #wallpaper = wallpaper;
         cursor = {
           theme = "macOS";
           size = 24;
@@ -112,7 +112,7 @@ in
             {
               iconTasks = {
                 launchers = [
-                  "applications:firefox.desktop"
+                  "applications:helium.desktop"
                   "applications:org.kde.dolphin.desktop"
                   "applications:org.kde.konsole.desktop"
                 ];

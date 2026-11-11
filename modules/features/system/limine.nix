@@ -7,7 +7,7 @@
 
       # Make this false for the first install, then set it to true
       # once the keys exist and are enrolled.
-      secureBoot.enable = true;
+      secureBoot.enable = false;
 
       style = {
         wallpapers = [ "${inputs.assets}/wallpapers/static/limine-splash.png" ];
