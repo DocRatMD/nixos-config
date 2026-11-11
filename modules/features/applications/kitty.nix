@@ -9,14 +9,18 @@
       enable = true;
 
       font = {
-        name = "JetBrainsMono Nerd Font Mono";
+        name = "JetBrainsMono Nerd Font";
         package = pkgs.nerd-fonts.jetbrains-mono;
         size = 12;
       };
 
       settings = {
-        # Appearance
-        window_padding_width = 10;
+
+        background = "#17171b";
+        foreground = "#cad3f5";
+        background_opacity = 0.70;
+        window_padding_width = 5;
+        background_blur = 1;
 
         # Scrollback
         scrollback_lines = 10000;

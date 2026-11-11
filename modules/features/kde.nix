@@ -4,9 +4,19 @@ let
 in
 {
 
-  flake.nixosModules.kde = { ... }: {
+  flake.nixosModules.kde = { pkgs, ... }: {
     home-manager.sharedModules = [ self.homeModules.kde ];
     services.desktopManager.plasma6.enable = true;
+
+    programs.kde-pim.enable = false;
+
+    environment.plasma6.excludePackages = with pkgs.kdePackages; [
+      elisa
+      plasma-browser-integration
+      # kwrite
+      # ktnef
+      # kmail
+    ];
   };
 
   flake.homeModules.kde = { pkgs, ... }: {
@@ -27,6 +37,7 @@ in
       gtk.enable = true;
       x11.enable = true;
     };
+
 
     programs.plasma = {
       enable = true;
@@ -114,7 +125,7 @@ in
                 launchers = [
                   "applications:helium.desktop"
                   "applications:org.kde.dolphin.desktop"
-                  "applications:org.kde.konsole.desktop"
+                  "applications:kitty.desktop"
                 ];
                 appearance = {
                   indicateAudioStreams = false;
